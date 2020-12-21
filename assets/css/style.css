@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*  Colors  
+Blue - #10069f
+Lt Blue - #342bad
+X lt Blue - #449DD1
+Gray - #4B5358
+White - #F5F6F4
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* Fonts 
+Roboto
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    background-color: #F5F6F4;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #449DD1;
+}
+
+#logo {
+    margin-top: 1rem;
+}
+
+/* First Container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #449DD1;
+    border-radius: 5%;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    margin: 0 1rem 1.2rem;;
+}
+
+input[type='number'], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+}
+
+label {
+    text-align: left;
+}
+
+select:focus {
+    border: 1px solid #4B5358;
+}
+
+/* Second Container (Table) */
+
+.table th {
+    text-align: left;
+}
+
+.table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
+
+  

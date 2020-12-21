@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <a href="http://www.diverseydigital.com/natools/"><img src="../assets/images/logo.png" alt="Diversey Logo" id="logo"></a>
+      <h1>Dilution Control Calculator</h1>
+    </header>
+
+    <pick-products></pick-products>
+    <product-table></product-table>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import PickProduct from '@/components/PickProduct.vue';
+import ProductTable from '@/components/ProductTable.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    'pick-products': PickProduct,
+    'product-table': ProductTable,
+  },
+  data() {
+    return {
+    }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import '../assets/css/style.css';
 </style>
