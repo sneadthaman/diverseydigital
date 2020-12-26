@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <a href="http://www.diverseydigital.com/natools/"><img src="../assets/images/logo.png" alt="Diversey Logo" id="logo"></a>
+      <a href="http://www.diverseydigital.com/natools/"><img src="../assets/images/janvey_logo-125.png" alt="Diversey Logo" id="logo"></a>
       <h1>Dilution Control Calculator</h1>
     </header>
 

@@ -5,7 +5,9 @@
       <label for="platform">Dilution Control Platform</label>
       <select id="platform" name="platform" v-model="selectedBrand">
         <option value="" disabled>--Select a Platform--</option>
-        <option v-for="brand in brands" :key="brand.id">{{ brand }}</option>
+        <optgroup label="Diversey">
+          <option v-for="brand in brands" :key="brand.id">{{ brand }}</option>
+        </optgroup>
       </select>
       <label for="category">Category of Product</label>
       <select id="category" name="category" v-model="selectedCategory">
