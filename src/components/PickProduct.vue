@@ -29,6 +29,13 @@
 
       <button v-if="selectedPrice && selectedRatio" @click="lockItIn">Submit</button>
       <button v-if="selectedPrice && selectedRatio" @click="clearForm">Clear</button>
+
+      <!-- Show Confirmation message if product is successfully added -->
+    <transition name="fade">
+      <p 
+      class="alert"
+      v-if="showConfirmation">Product was added to table</p>
+    </transition>
     </div>
 </div>
 </template>
@@ -39,6 +46,7 @@ export default{
   props: [''],
   data(){
     return{
+      showConfirmation: false,
       // User Selections from Form
       selectedBrand: '',
       selectedCategory: '',
@@ -109,7 +117,10 @@ export default{
         selectedRatio: this.selectedRatio,
         selectedPrice: this.selectedPrice
       }
+      this.showConfirmation = true;
       console.log(this.selectedItems);
+      
+      this.$emit("updateTable", this.selectedItems);
     },
     clearForm() {
       this.selectedBrand = '';
@@ -117,6 +128,7 @@ export default{
       this.selectedProduct = '';
       this.selectedRatio = '';
       this.selectedPrice = '';
+      this.showConfirmation = false;
     }
   },
   mounted() {

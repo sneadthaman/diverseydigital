@@ -3,6 +3,7 @@
       <table>
         <tr>
           <th>Product</th>
+          <td v-for="product in productList" :item="product.selectedProduct" :key="product.index">{{ product.selectedProduct }}</td>
         </tr>
         <tr>
           <th>Bottle Size</th>
@@ -41,10 +42,27 @@
 <script>
 export default{
   name:'product-table',
+  props: {
+    product: {
+      brand: '',
+      selectedProduct: '',
+      category: '',
+      ratio: '',
+      price: '',
+    }
+  },
   data(){
-    return{}
+    return{
+      productList: [],
+    }
   },
   methods:{
+  },
+  watch: {
+    product: function() {
+      this.productList.push(this.product);
+      console.log(this.productList);
+    }
   }
 }
 </script>

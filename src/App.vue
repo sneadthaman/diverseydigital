@@ -5,8 +5,8 @@
       <h1>Dilution Control Calculator</h1>
     </header>
 
-    <pick-products></pick-products>
-    <product-table></product-table>
+    <pick-products @updateTable="updateTable"></pick-products>
+    <product-table :product="tableData"></product-table>
 
   </div>
 </template>
@@ -24,8 +24,15 @@ export default {
   },
   data() {
     return {
+      tableData: '',
     }
   },
+  methods: {
+    updateTable(data) {
+      this.tableData = data;
+      console.log(this.tableData);
+    }
+  }
 }
 </script>
 

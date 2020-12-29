@@ -86,6 +86,34 @@ select:focus {
     background-color: #dddddd;
 }
 
+button {
+    background-color: #449DD1;
+    width: 50%;
+    margin: 0 auto;
+    padding: .6em;
+    margin-top: .6em;
+    border: none;
+    border-radius: 10px;
+    color: #F5F6F4;
+    letter-spacing: .2em;
+    font-weight: 700; 
+}
+
+.alert {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s ease;
+}
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
 
 
 
