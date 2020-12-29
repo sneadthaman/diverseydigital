@@ -120,6 +120,8 @@ export default{
       this.showConfirmation = true;
       console.log(this.selectedItems);
       
+      // Send signal to App.vue in order to pass
+      // data to ProductTable component
       this.$emit("updateTable", this.selectedItems);
     },
     clearForm() {

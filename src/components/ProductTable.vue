@@ -7,9 +7,13 @@
         </tr>
         <tr>
           <th>Bottle Size</th>
+          <td></td>
         </tr>
         <tr>
           <th>Dilution Ratio</th>
+          <td v-for="product in productList"
+          :item="product.selectedRatio"
+          :key="product.index">{{ product.selectedRatio }}</td>
         </tr>
         <tr>
           <th>Bottles/Case</th>
@@ -28,6 +32,9 @@
         </tr>
         <tr>
           <th>$/Case</th>
+          <td v-for="product in productList"
+          :item="product.selectedPrice"
+          :key="product.index">{{ "$" + product.selectedPrice }}</td>
         </tr>
         <tr>
           <th>$/EUG</th>
@@ -36,6 +43,7 @@
           <th>$/EUQ</th>
         </tr>
       </table>
+      <button @click="clearTable">Clear Table</button>
     </div>
 </template>
 
@@ -43,13 +51,7 @@
 export default{
   name:'product-table',
   props: {
-    product: {
-      brand: '',
-      selectedProduct: '',
-      category: '',
-      ratio: '',
-      price: '',
-    }
+    product: {}
   },
   data(){
     return{
@@ -57,6 +59,9 @@ export default{
     }
   },
   methods:{
+    clearTable() {
+      this.productList = [];
+    }
   },
   watch: {
     product: function() {
